@@ -1,0 +1,103 @@
+html {
+  min-height: 100%;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background-image: url(../imagenes/95603487-concepto-de-viaje-aéreo-para-folletos-de-agencias-de-aerolíneas-y-carteles-de-fondo.webp);
+  background-repeat: repeat;
+  padding-bottom: 5rem;
+  width: 100%;
+}
+.titulo {
+  font-weight: bold;
+  font-size: 3rem;
+  text-transform: uppercase;
+  color: white;
+}
+.container {
+    background-color: white;
+    border-radius: 1%;
+}
+header {
+  margin-top: 3rem;
+}
+header h1 {
+  color: white;
+}
+.lista-citas .cita {
+  border-bottom: 1px solid #e1e1e1;
+  padding: 2rem;
+  padding-bottom: 3rem;
+  
+}
+.lista-citas .cita:last-of-type {
+  border-bottom: 0;
+}
+
+.lista-citas .cita p {
+  margin:0;
+}
+.lista-citas .cita button {
+  margin-top: 1rem!important;
+}
+.lista-citas .cita span {
+  font-weight: bold;
+}
+textarea {
+    height: 200px!important;
+}
+
+svg {
+  width: 21px;
+}
+
+h2 {
+
+  text-align: center;
+}
+
+.asientos{
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.asientos_a{
+  background-color: green;
+  margin-right: 0.5rem;
+  margin-top: 1rem;
+}
+
+.asientos_a:hover{
+  cursor: pointer;
+  box-shadow:.5em.5em rgba(46, 79,);
+  transform: scale(.8) ;
+  background-color: grey;
+
+}
+
+.asiento_seleccionado{
+  background-color: yellow;
+  margin-right: 1rem;
+  margin-top: 1rem;
+  border-radius: 1rem;
+}
+
+.asiento_reservado{
+  background-color: red;
+  margin-right: 1rem;
+  margin-top: 1rem;
+  border-radius: 1rem;
+}
+
+.asiento_reservado:hover{
+  background-color: red;
+  margin-right: 1rem;
+  margin-top: 1rem;
+  border-radius: 1rem;
+}
+
+.btn{
+  margin-right: 1rem;
+}

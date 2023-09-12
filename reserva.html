@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Reserva de Vuelos</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <h2 class="text-center my-5 titulo">Reserva de Vuelos</h2>
+    <div class="container mt-5 p-5">
+        <div id="contenido" class="row">
+            <div class="col-md-6 agregar-pasaje">
+                <form id="nuevo-pasaje" name="form">
+                    <legend class="mb-4">Datos del Pasajero</legend>
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-lg-4 col-form-label">Nombre:</label>
+                        <div class="col-sm-8 col-lg-8">
+                            <input type="text" id="nombrepass" name="nombre" class="form-control" placeholder="Nombre del Pasajero">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-lg-4 col-form-label">Apellido:</label>
+                        <div class="col-sm-8 col-lg-8">
+                            <input type="text" id="apellidopass" name="apellido" class="form-control"  placeholder="Apellido del Pasajero">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-lg-4 col-form-label">Teléfono:</label>
+                        <div class="col-sm-8 col-lg-8">
+                            <input type="tel" id="telefono" name="telefono" class="form-control"  placeholder="Número de Teléfono">
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-lg-4 col-form-label"> Tipo de Pasaje:</label>
+                        <div class="col-sm-8 col-lg-8">
+                            <input type="radio" name="opciones" value="ida"> IDA
+                            <input type="radio" name="opciones" value="idayvuelta"> IDA y VUELTA
+                        </div>
+                    </div>
+
+                    
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-lg-4 col-form-label">Origen:</label>
+                        <div class="col-sm-8 col-lg-8">
+                            <input type="text" id="origen" name="origen" class="form-control"  placeholder="Origen">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-lg-4 col-form-label">Destino:</label>
+                        <div class="col-sm-8 col-lg-8">
+                            <input type="text" id="destino" name="destino" class="form-control"  placeholder="Destino">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-lg-4 col-form-label">Fecha de Salida:</label>
+                        <div class="col-sm-8 col-lg-8">
+                            <input type="date" id="fecha" name="fecha" class="form-control">
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-lg-4 col-form-label">Hora de Salida:</label>
+                        <div class="col-sm-8 col-lg-8">
+                            <input type="time" id="hora" name="hora" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-lg-4 col-form-label">Fecha de Llegada:</label>
+                        <div class="col-sm-8 col-lg-8">
+                            <input type="date" id="fecha2" name="fecha2" class="form-control">
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-lg-4 col-form-label">Hora de Llegada:</label>
+                        <div class="col-sm-8 col-lg-8">
+                            <input type="time" id="hora2" name="hora2" class="form-control"> <br>
+                           
+                        </div>
+                    </div>
+                   
+                    <div class="">
+                        <label class="col-sm-4 col-lg-4 col-form-label">Asientos:</label>
+                        <div class="">
+                        <div id="asientos" name="asiento" class="asientos">
+                            <img class ="asientos_a" name="1" value ='1'id='M1'src="./imagenes/airline_seat_recline_extra_FILL0_wght400_GRAD0_opsz48.svg" alt="asientos" >M1
+                            <img class ="asientos_a" id='M2'src="./imagenes/airline_seat_recline_extra_FILL0_wght400_GRAD0_opsz48.svg" alt="asientos" >M2
+                            <img class ="asientos_a" id='M3'src="./imagenes/airline_seat_recline_extra_FILL0_wght400_GRAD0_opsz48.svg" alt="asientos" >M3
+                            <img class ="asientos_a" id='M4'src="./imagenes/airline_seat_recline_extra_FILL0_wght400_GRAD0_opsz48.svg" alt="asientos" >M4
+                            <img class ="asientos_a" id='M5'src="./imagenes/airline_seat_recline_extra_FILL0_wght400_GRAD0_opsz48.svg" alt="asientos" >M5
+                            <img class ="asientos_a" id='M6'src="./imagenes/airline_seat_recline_extra_FILL0_wght400_GRAD0_opsz48.svg" alt="asientos" >M6
+                            
+                        </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                            <button type="submit" class="btn btn-success w-100 d-block">Crear Boleto</button>
+                    </div>
+                </form>
+            </div>
+            <div class="col-md-6">
+                <h2 id="administra" class="mb-4">Lista de Boletos</h2>
+                <ul id="pasajes" class="list-group lista-citas"></ul>
+
+                <!--'Eliminar <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>';-->
+                <!--'Editar <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"></path></svg>'-->
+            </div>
+        </div> <!--.row-->
+    </div><!--.container-->
+
+    <script src="js/vuelo.js"></script>
+
+</body>
+</html>
